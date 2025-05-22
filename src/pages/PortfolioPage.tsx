@@ -30,7 +30,7 @@ const PortfolioPage = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 main-gradient text-white">
+      <section className="relative py-20 bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient-shift bg-[length:200%_200%] text-white">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Stock Platforms Section */}
-      <section className="py-8 bg-white border-b border-gray-100">
+      <section className="py-8 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
         <div className="section-container">
           <div className="flex flex-wrap justify-center gap-4">
             {stockPlatforms.map((platform) => (
@@ -56,14 +56,14 @@ const PortfolioPage = () => {
                 href={platform.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                className="flex items-center gap-3 px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
               >
-                <div className="p-2 bg-indigo-50 rounded-lg">
+                <div className="p-2 bg-indigo-50 dark:bg-indigo-900/50 rounded-lg">
                   {platform.icon}
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">{platform.name}</p>
-                  <p className="text-sm text-gray-600">{platform.description}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{platform.name}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{platform.description}</p>
                 </div>
                 <ExternalLink className="w-4 h-4 text-gray-400" />
               </a>
@@ -73,7 +73,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="sticky top-16 z-20 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <section className="sticky top-16 z-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-700">
         <div className="section-container py-4">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -83,7 +83,7 @@ const PortfolioPage = () => {
                 className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all ${
                   activeCategory === category.id
                     ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 {category.icon}
@@ -95,7 +95,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="section-container">
           <AnimatePresence mode="wait">
             <motion.div
@@ -113,7 +113,7 @@ const PortfolioPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                  className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
                   <div className="relative aspect-square overflow-hidden">
                     <img
@@ -145,7 +145,7 @@ const PortfolioPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                  className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
                   <div className="relative aspect-square overflow-hidden">
                     <img
@@ -170,7 +170,7 @@ const PortfolioPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+                  className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
                   <div className="relative aspect-[9/16] bg-gray-900">
                     <iframe
@@ -182,13 +182,13 @@ const PortfolioPage = () => {
                     ></iframe>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold">{video.title}</h3>
-                    <p className="text-gray-600 text-sm mt-1">{video.description}</p>
+                    <h3 className="font-semibold dark:text-white">{video.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">{video.description}</p>
                     <a
                       href={video.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-indigo-600 text-sm mt-2 hover:underline"
+                      className="inline-flex items-center gap-1 text-indigo-600 dark:text-indigo-400 text-sm mt-2 hover:underline"
                     >
                       Watch on YouTube <ExternalLink className="w-4 h-4" />
                     </a>

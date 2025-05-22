@@ -144,7 +144,7 @@ const CVPage = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 main-gradient text-white">
+      <section className="relative py-20 bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient-shift bg-[length:200%_200%] text-white">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -192,19 +192,19 @@ const CVPage = () => {
       </section>
 
       {/* CV Content */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
             {/* Summary Section */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeInUpVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-gray-700"
             >
               <h2 className="text-2xl font-bold mb-4">{t.title}</h2>
-              <p className="text-gray-700 leading-relaxed">{t.summary}</p>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{t.summary}</p>
             </motion.div>
 
             {/* Experience Section */}
@@ -213,7 +213,7 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-gray-700"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Briefcase className="w-6 h-6 text-indigo-600" />
@@ -223,9 +223,9 @@ const CVPage = () => {
                 <motion.div variants={fadeInUpVariants}>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-lg font-semibold">{t.experience.freelance.title}</h3>
-                    <span className="text-sm text-gray-600">{t.experience.freelance.period}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{t.experience.freelance.period}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-4">
                     {t.experience.freelance.achievements.map((achievement, index) => (
                       <motion.li
                         key={index}
@@ -246,7 +246,7 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-gray-700"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <GraduationCap className="w-6 h-6 text-indigo-600" />
@@ -255,11 +255,11 @@ const CVPage = () => {
               <motion.div variants={fadeInUpVariants}>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-lg font-semibold">{t.education.university.degree}</h3>
-                  <span className="text-sm text-gray-600">2019 - 2023</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">2019 - 2023</span>
                 </div>
-                <p className="text-gray-700 mb-2">{t.education.university.school}</p>
-                <p className="text-gray-700 mb-2">GPA: 3.61</p>
-                <p className="text-gray-700 italic">{t.education.university.thesis}</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-2">{t.education.university.school}</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-2">GPA: 3.61</p>
+                <p className="text-gray-700 dark:text-gray-300 italic">{t.education.university.thesis}</p>
               </motion.div>
             </motion.div>
 
@@ -269,7 +269,7 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-gray-700"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Award className="w-6 h-6 text-indigo-600" />
@@ -279,9 +279,9 @@ const CVPage = () => {
                 <motion.div variants={fadeInUpVariants}>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-lg font-semibold">{t.projects.film.title}</h3>
-                    <span className="text-sm text-gray-600">{t.projects.film.period}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{t.projects.film.period}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-4">
                     {t.projects.film.details.map((detail, index) => (
                       <motion.li
                         key={index}
@@ -297,9 +297,9 @@ const CVPage = () => {
                 <motion.div variants={fadeInUpVariants}>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-lg font-semibold">{t.projects.content.title}</h3>
-                    <span className="text-sm text-gray-600">{t.projects.content.period}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{t.projects.content.period}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-4">
                     {t.projects.content.details.map((detail, index) => (
                       <motion.li
                         key={index}
@@ -320,7 +320,7 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-gray-700"
             >
               <h2 className="text-2xl font-bold mb-6">{t.technical}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -341,10 +341,10 @@ const CVPage = () => {
                     className="space-y-2"
                   >
                     <div className="flex justify-between">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
                       <span className="text-indigo-600">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -373,13 +373,13 @@ const CVPage = () => {
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">{t.languages.indonesian}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{t.languages.indonesian}</span>
                     <span className="text-indigo-600">{t.languages.native}</span>
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">{t.languages.english}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{t.languages.english}</span>
                     <span className="text-indigo-600">{t.languages.intermediate}</span>
                   </div>
                 </div>
