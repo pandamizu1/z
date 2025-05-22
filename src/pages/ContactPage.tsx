@@ -19,8 +19,8 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Hero Section with improved background */}
       <div className="relative h-[60vh] flex items-center overflow-hidden">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 main-gradient"></div>
+        {/* Animated gradient background - now with dark mode support */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient-shift bg-[length:200%_200%]"></div>
         
         {/* Animated shapes */}
         <div className="absolute inset-0 overflow-hidden">
